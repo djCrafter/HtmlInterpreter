@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		DF807A4A2283706A00C44C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A492283706A00C44C96 /* AppDelegate.swift */; };
 		DF807A4C2283706A00C44C96 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A4B2283706A00C44C96 /* DocumentBrowserViewController.swift */; };
-		DF807A4E2283706A00C44C96 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A4D2283706A00C44C96 /* DocumentViewController.swift */; };
-		DF807A502283706A00C44C96 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A4F2283706A00C44C96 /* Document.swift */; };
+		DF807A502283706A00C44C96 /* HtmlDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A4F2283706A00C44C96 /* HtmlDocument.swift */; };
 		DF807A532283706B00C44C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF807A512283706B00C44C96 /* Main.storyboard */; };
 		DF807A552283706C00C44C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF807A542283706C00C44C96 /* Assets.xcassets */; };
 		DF807A582283706C00C44C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF807A562283706C00C44C96 /* LaunchScreen.storyboard */; };
+		DF807A64228372CE00C44C96 /* HtmlTagStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A60228372CD00C44C96 /* HtmlTagStruct.swift */; };
+		DF807A65228372CE00C44C96 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A61228372CD00C44C96 /* WKWebViewController.swift */; };
+		DF807A66228372CE00C44C96 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A62228372CE00C44C96 /* CollectionViewCell.swift */; };
+		DF807A67228372CE00C44C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF807A63228372CE00C44C96 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF807A462283706A00C44C96 /* HtmlInterpreter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HtmlInterpreter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF807A492283706A00C44C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF807A4B2283706A00C44C96 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
-		DF807A4D2283706A00C44C96 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		DF807A4F2283706A00C44C96 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		DF807A4F2283706A00C44C96 /* HtmlDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlDocument.swift; sourceTree = "<group>"; };
 		DF807A522283706B00C44C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF807A542283706C00C44C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF807A572283706C00C44C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF807A592283706C00C44C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF807A60228372CD00C44C96 /* HtmlTagStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HtmlTagStruct.swift; sourceTree = "<group>"; };
+		DF807A61228372CD00C44C96 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		DF807A62228372CE00C44C96 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		DF807A63228372CE00C44C96 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,27 @@
 		DF807A482283706A00C44C96 /* HtmlInterpreter */ = {
 			isa = PBXGroup;
 			children = (
-				DF807A492283706A00C44C96 /* AppDelegate.swift */,
+				DF807A5F2283709F00C44C96 /* Supporting Files */,
 				DF807A4B2283706A00C44C96 /* DocumentBrowserViewController.swift */,
-				DF807A4D2283706A00C44C96 /* DocumentViewController.swift */,
-				DF807A4F2283706A00C44C96 /* Document.swift */,
+				DF807A4F2283706A00C44C96 /* HtmlDocument.swift */,
+				DF807A61228372CD00C44C96 /* WKWebViewController.swift */,
+				DF807A63228372CE00C44C96 /* ViewController.swift */,
+				DF807A62228372CE00C44C96 /* CollectionViewCell.swift */,
+				DF807A60228372CD00C44C96 /* HtmlTagStruct.swift */,
 				DF807A512283706B00C44C96 /* Main.storyboard */,
-				DF807A542283706C00C44C96 /* Assets.xcassets */,
-				DF807A562283706C00C44C96 /* LaunchScreen.storyboard */,
 				DF807A592283706C00C44C96 /* Info.plist */,
 			);
 			path = HtmlInterpreter;
+			sourceTree = "<group>";
+		};
+		DF807A5F2283709F00C44C96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF807A492283706A00C44C96 /* AppDelegate.swift */,
+				DF807A542283706C00C44C96 /* Assets.xcassets */,
+				DF807A562283706C00C44C96 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF807A502283706A00C44C96 /* Document.swift in Sources */,
-				DF807A4E2283706A00C44C96 /* DocumentViewController.swift in Sources */,
+				DF807A65228372CE00C44C96 /* WKWebViewController.swift in Sources */,
+				DF807A64228372CE00C44C96 /* HtmlTagStruct.swift in Sources */,
+				DF807A66228372CE00C44C96 /* CollectionViewCell.swift in Sources */,
+				DF807A502283706A00C44C96 /* HtmlDocument.swift in Sources */,
+				DF807A67228372CE00C44C96 /* ViewController.swift in Sources */,
 				DF807A4C2283706A00C44C96 /* DocumentBrowserViewController.swift in Sources */,
 				DF807A4A2283706A00C44C96 /* AppDelegate.swift in Sources */,
 			);
