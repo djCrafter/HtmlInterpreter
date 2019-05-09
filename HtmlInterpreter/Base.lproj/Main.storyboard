@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HQk-yu-P8x">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DocumentBrowserViewController" customModule="HtmlInterpreter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0fo-ii-Aj5"/>
@@ -28,13 +28,13 @@
         <!--View Controller-->
         <scene sceneID="w2c-is-KwO">
             <objects>
-                <viewController id="pOw-dh-VkA" customClass="ViewController" customModule="HTML_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pOw-dh-VkA" customClass="ViewController" customModule="HtmlInterpreter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VUi-hv-KAQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ok4-DF-Of4">
-                                <rect key="frame" x="20" y="123" width="335" height="461"/>
+                                <rect key="frame" x="20" y="154" width="374" height="625"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -43,16 +43,7 @@
     &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;table border="1" width="100%" cellpadding="5"&gt;
-   &lt;tr&gt;
-    &lt;th&gt;Ячейка 1&lt;/th&gt;
-    &lt;th&gt;Ячейка 2&lt;/th&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-    &lt;td&gt;Ячейка 3&lt;/td&gt;
-    &lt;td&gt;Ячейка 4&lt;/td&gt;
-  &lt;/tr&gt;
- &lt;/table&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +51,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-N4-fQg">
-                                <rect key="frame" x="130.5" y="601" width="114" height="66"/>
+                                <rect key="frame" x="150" y="796" width="114" height="66"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="KKU-v4-fBC"/>
@@ -74,7 +65,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wct-C5-EY3">
-                                <rect key="frame" x="20" y="71" width="335" height="51"/>
+                                <rect key="frame" x="20" y="95" width="374" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="3q4-J6-Wht"/>
@@ -86,7 +77,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="Zan-MV-uKr" customClass="CollectionViewCell" customModule="HTML_Reader" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="Zan-MV-uKr" customClass="CollectionViewCell" customModule="HtmlInterpreter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -94,7 +85,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;b&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMk-tt-ZHd">
-                                                    <rect key="frame" x="9.5" y="15" width="31" height="20"/>
+                                                    <rect key="frame" x="9.6666666666666643" y="15" width="31" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -122,12 +113,23 @@
                             <constraint firstItem="HBw-be-blB" firstAttribute="trailing" secondItem="ok4-DF-Of4" secondAttribute="trailing" constant="20" id="Jhs-uL-Txs"/>
                             <constraint firstItem="HBw-be-blB" firstAttribute="trailing" secondItem="Wct-C5-EY3" secondAttribute="trailing" constant="20" id="MSQ-ft-YR1"/>
                             <constraint firstItem="bn1-N4-fQg" firstAttribute="top" secondItem="ok4-DF-Of4" secondAttribute="bottom" constant="17" id="S6y-bK-NgF"/>
-                            <constraint firstItem="ok4-DF-Of4" firstAttribute="top" secondItem="Wct-C5-EY3" secondAttribute="bottom" constant="1" id="WEt-sS-Q23"/>
+                            <constraint firstItem="ok4-DF-Of4" firstAttribute="top" secondItem="Wct-C5-EY3" secondAttribute="bottom" constant="8" id="WEt-sS-Q23"/>
                             <constraint firstItem="bn1-N4-fQg" firstAttribute="bottom" secondItem="HBw-be-blB" secondAttribute="bottom" id="WWu-GM-zEA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HBw-be-blB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KEY-ST-aYg"/>
+                    <navigationItem key="navigationItem" id="KEY-ST-aYg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="EVg-cY-4UT">
+                            <connections>
+                                <action selector="done:" destination="pOw-dh-VkA" id="Nfe-s1-GmV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="G46-Sg-0xU">
+                            <connections>
+                                <action selector="save:" destination="pOw-dh-VkA" id="Cj3-Vn-wUN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Wct-C5-EY3" id="3GJ-zw-klL"/>
                         <outlet property="textField" destination="ok4-DF-Of4" id="b9V-oQ-TLL"/>
@@ -136,14 +138,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtC-62-Awp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="648"/>
+            <point key="canvasLocation" x="1666.6666666666667" y="647.54464285714278"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="3Ag-6S-gXb">
             <objects>
-                <viewController id="Mv3-a8-gyw" customClass="WKWebViewController" customModule="HTML_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mv3-a8-gyw" customClass="WKWebViewController" customModule="HtmlInterpreter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2jr-wW-B6E">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mkf-I5-pbA"/>
@@ -156,10 +158,10 @@
         <!--Navigation Controller-->
         <scene sceneID="PaH-Xp-eQW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HQk-yu-P8x" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HtmlInterpreter" automaticallyAdjustsScrollViewInsets="NO" id="HQk-yu-P8x" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ysC-Ht-LLm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
- 
+    var document: HtmlDocument?
+    
     var tags: [HtmlTag] = [HtmlTag(title: "b", content: "<b></b>"),
                            HtmlTag(title: "i", content: "<i></i>"),
                            HtmlTag(title: "p", content: "<p></p>"),
@@ -24,9 +24,23 @@ class ViewController: UIViewController {
                            HtmlTag(title: "h6", content: "<h6></h6>")
     ]
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     @IBOutlet weak var textField: UITextView!
     
+    @IBAction func done(_ sender: Any) {
+        save(sender)
+        dismiss(animated: true) {
+            self.document?.close()
+        }
+    }
     
+    @IBAction func save(_ sender: Any) {
+        document?.htmlString = textField.text
+        if document?.htmlString != nil {
+            self.document?.updateChangeCount(.done)
+        }
+    }
     
     @IBAction func InterpretButton(_ sender: Any) {
         performSegue(withIdentifier: "WebViewSegue", sender: sender)
@@ -36,7 +50,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewSetting()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        document?.open { success in
+            if success {
+                self.textField.text = self.document?.htmlString
+            }
+        }
     }
     
     func collectionViewSetting() {
@@ -56,13 +78,13 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WebViewSegue" {
+            save(sender)
             if let detaiViewController = segue.destination as? WKWebViewController {
                detaiViewController.htmlString = textField.text
             }
         }
     }
 }
-
 
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDragDelegate, UICollectionViewDropDelegate {
@@ -110,8 +132,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         }
     }
 }
-
-
+    
     // MARK: ColletionView setting
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return tags.count
@@ -133,3 +154,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         }
 }
 
+extension UIViewController {
+    var contents: UIViewController {
+        if let navcon = self as? UINavigationController {
+            return navcon.visibleViewController ?? navcon
+        } else {
+            return self
+        }
+    }
+}

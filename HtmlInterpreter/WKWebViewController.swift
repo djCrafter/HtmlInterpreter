@@ -24,13 +24,7 @@ class WKWebViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()        
-        webView.loadHTMLString(htmlString, baseURL: nil)
-        var scriptContent = "var meta = document.createElement('meta');"
-        scriptContent += "meta.name='viewport';"
-        scriptContent += "meta.content='width=device-width';"
-        scriptContent += "document.getElementsByTagName('head')[0].appendChild(meta);"
-        
-        webView.evaluateJavaScript(scriptContent, completionHandler: nil)
+        webView.loadHTMLString(htmlString, baseURL: nil)            
     }
     
 }

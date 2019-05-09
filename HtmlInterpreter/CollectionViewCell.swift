@@ -12,5 +12,4 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var tagLabel: UILabel!
     var content: String?
-    
 }
