@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         }
     }
     
+
     @IBAction func InterpretButton(_ sender: Any) {
         performSegue(withIdentifier: "WebViewSegue", sender: sender)
     }
@@ -50,10 +51,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewSetting()
+        openDocument()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    func openDocument() {
         document?.open { success in
             if success {
                 self.textField.text = self.document?.htmlString
@@ -78,9 +79,8 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WebViewSegue" {
-            save(sender)
             if let detaiViewController = segue.destination as? WKWebViewController {
-               detaiViewController.htmlString = textField.text
+               detaiViewController.htmlString = document?.htmlString ?? "Error"
             }
         }
     }

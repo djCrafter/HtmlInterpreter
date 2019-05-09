@@ -25,7 +25,7 @@ class HtmlDocument: UIDocument {
         if let userContent = contents as? Data, userContent.count > 0 {
             htmlString = NSString(bytes: (contents as AnyObject).bytes,
             length: userContent.count,
-            encoding: String.Encoding.utf8.rawValue) as? String
+            encoding: String.Encoding.utf8.rawValue) as String?
         }
     }
 }
