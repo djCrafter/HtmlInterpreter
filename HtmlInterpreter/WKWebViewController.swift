@@ -23,8 +23,9 @@ class WKWebViewController: UIViewController, WKUIDelegate {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
-        webView.loadHTMLString(htmlString, baseURL: nil)            
+        super.viewDidLoad()      
+        webView.loadHTMLString(htmlString, baseURL: nil)
+    
     }
     
 }

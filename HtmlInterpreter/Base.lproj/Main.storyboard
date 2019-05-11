@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ok4-DF-Of4">
-                                <rect key="frame" x="20" y="154" width="374" height="625"/>
+                                <rect key="frame" x="20" y="154" width="374" height="708"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -50,20 +50,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-N4-fQg">
-                                <rect key="frame" x="150" y="796" width="114" height="66"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="KKU-v4-fBC"/>
-                                    <constraint firstAttribute="width" constant="114" id="c9u-ce-Sh2"/>
-                                </constraints>
-                                <state key="normal" title="INTERPRET">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="InterpretButton:" destination="pOw-dh-VkA" eventType="touchUpInside" id="BXU-cz-jqd"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wct-C5-EY3">
                                 <rect key="frame" x="20" y="95" width="374" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,21 +95,31 @@
                             <constraint firstItem="Wct-C5-EY3" firstAttribute="leading" secondItem="HBw-be-blB" secondAttribute="leading" constant="20" id="5Dz-ct-J5V"/>
                             <constraint firstItem="ok4-DF-Of4" firstAttribute="leading" secondItem="HBw-be-blB" secondAttribute="leading" constant="20" id="5ze-Oh-bq7"/>
                             <constraint firstItem="Wct-C5-EY3" firstAttribute="top" secondItem="HBw-be-blB" secondAttribute="top" constant="7" id="6O0-o7-Kxt"/>
-                            <constraint firstItem="bn1-N4-fQg" firstAttribute="centerX" secondItem="VUi-hv-KAQ" secondAttribute="centerX" id="BdM-Qk-KOH"/>
+                            <constraint firstItem="ok4-DF-Of4" firstAttribute="bottom" secondItem="HBw-be-blB" secondAttribute="bottom" id="7xv-xy-VHn"/>
                             <constraint firstItem="HBw-be-blB" firstAttribute="trailing" secondItem="ok4-DF-Of4" secondAttribute="trailing" constant="20" id="Jhs-uL-Txs"/>
                             <constraint firstItem="HBw-be-blB" firstAttribute="trailing" secondItem="Wct-C5-EY3" secondAttribute="trailing" constant="20" id="MSQ-ft-YR1"/>
-                            <constraint firstItem="bn1-N4-fQg" firstAttribute="top" secondItem="ok4-DF-Of4" secondAttribute="bottom" constant="17" id="S6y-bK-NgF"/>
                             <constraint firstItem="ok4-DF-Of4" firstAttribute="top" secondItem="Wct-C5-EY3" secondAttribute="bottom" constant="8" id="WEt-sS-Q23"/>
-                            <constraint firstItem="bn1-N4-fQg" firstAttribute="bottom" secondItem="HBw-be-blB" secondAttribute="bottom" id="WWu-GM-zEA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HBw-be-blB"/>
                     </view>
                     <navigationItem key="navigationItem" id="KEY-ST-aYg">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="EVg-cY-4UT">
                             <connections>
                                 <action selector="done:" destination="pOw-dh-VkA" id="Nfe-s1-GmV"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hrJ-pw-6Hi">
+                            <rect key="frame" x="172" y="5" width="70" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Interpret">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="InterpretButton:" destination="pOw-dh-VkA" eventType="touchUpInside" id="tU6-hO-Es4"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="G46-Sg-0xU">
                             <connections>
                                 <action selector="save:" destination="pOw-dh-VkA" id="Cj3-Vn-wUN"/>
@@ -138,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtC-62-Awp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666.6666666666667" y="647.54464285714278"/>
+            <point key="canvasLocation" x="1666.6666666666667" y="646.875"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="3Ag-6S-gXb">

@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
 
     @IBAction func InterpretButton(_ sender: Any) {
+        save(sender)
         performSegue(withIdentifier: "WebViewSegue", sender: sender)
     }
     
